@@ -12,7 +12,7 @@ public class ComputerApp {
         Computer computer = new Computer(new Monitor(),new SsdDrive() );
 
         computer.getDrive().addFile(new File("Picture.jpeg"));
-        computer.getDrive().findFile(new File("tomasz"));
+
 
 
         computer.getDrive().listFiles();
