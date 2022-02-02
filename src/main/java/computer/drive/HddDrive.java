@@ -17,9 +17,8 @@ public class HddDrive implements Drive{
 
     @Override
     public void listFiles() {
-        for (File f : files) {
-            System.out.println(f.getFileName());
-        }
+        files.forEach(files-> System.out.println(files.getFileName()));
+
     }
 
     @Override
