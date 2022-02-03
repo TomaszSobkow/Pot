@@ -16,5 +16,6 @@ public class ComputerApp {
 
 
         computer.getDrive().listFiles();
+        computer.getDrive().findFile(new File("Picture.jpeg"));
     }
 }
