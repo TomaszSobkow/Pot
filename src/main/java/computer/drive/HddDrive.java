@@ -24,8 +24,9 @@ public class HddDrive implements Drive{
     @Override
     public File findFile(File fileNameToFind) {
         Optional<File> fileFound = files.stream()
-                .filter(file -> file.getFileName().equals(fileNameToFind))
+                .filter(file -> file.getFileName().equals(fileNameToFind.getFileName()))
                 .findFirst();
+        System.out.println(fileFound.get().getFileName());
         return fileFound.orElseThrow();
     }
 }
