@@ -10,7 +10,7 @@ public class Mouse implements UsbDevice{
 
     @Override
     public boolean connect() {
-        System.out.println("Connected");
+        System.out.println( getClass().getSimpleName()+ " Connected");
         return true;
     }
 

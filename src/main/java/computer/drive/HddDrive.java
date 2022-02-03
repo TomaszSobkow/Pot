@@ -1,6 +1,6 @@
 package computer.drive;
 
-import computer.File;
+import computer.file.File;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public class HddDrive implements Drive{
 
-    List<File> files = new ArrayList<>();
+     private List<File> files = new ArrayList<>();
 
     @Override
     public void addFile(File file) {

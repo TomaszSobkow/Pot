@@ -16,7 +16,8 @@ public class PenDrive implements UsbDevice{
 
     @Override
     public boolean connect() {
-        return false;
+        System.out.println( getClass().getSimpleName()+ " Connected");
+        return true;
     }
 
     @Override

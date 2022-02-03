@@ -12,7 +12,7 @@ public class Computer {
     private Drive drive;
     private HeadPhone headPhone;
 
-    List<UsbDevice> usbDevices = new ArrayList<>();
+      private List<UsbDevice> usbDevices = new ArrayList<>();
 
     public Computer(Monitor monitor, Drive drive) {
         this.monitor = monitor;
@@ -36,5 +36,15 @@ public class Computer {
         if(isConnected){
             usbDevices.add(usbToConnect);
         }
+    }
+
+    public void deleteUsbDevice(UsbDevice delUsbDevice){
+        if(delUsbDevice.disconnect()){
+            usbDevices.remove(delUsbDevice);
+            System.out.println( delUsbDevice.getClass().getSimpleName()+ " Deleted ");
+        }else {
+
+        }
+
     }
 }
